@@ -1,0 +1,5 @@
+{
+  "name": "NutriTrack AI",
+  "description": "A smart nutrient tracking application that helps you monitor protein, carbs, fats, fiber, and essential minerals using AI-powered meal analysis.",
+  "requestFramePermissions": []
+}
