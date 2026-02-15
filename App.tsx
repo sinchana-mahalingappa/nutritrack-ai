@@ -523,7 +523,6 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {goals.map((goal) => (
               <div key={goal.key} onClick={() => setActiveNutrient(activeNutrient === goal.key ? null : goal.key)}>
-                <NutrientProgress 
                   goal={goal} 
                   current={totals[goal.key] || 0} 
                   isActive={activeNutrient === goal.key} 
