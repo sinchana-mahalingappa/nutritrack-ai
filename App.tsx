@@ -2,11 +2,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NutrientData, UserProfile, NutrientGoal, FoodItem, DietType, FoodCategory, HistoryMap } from './types';
 import { DEFAULT_GOALS, calculatePersonalizedGoals, FOOD_DATABASE } from './constants';
-import ProfileForm from './components/ProfileForm';
-import HistoryHeatmap from './components/HistoryHeatmap';
-import SettingsModal from './components/SettingsModal';
-import LoginPage from './components/LoginPage';
-import ConfirmDialog from './components/ConfirmDialog';
 import { generateDailyInsights } from './services/geminiService';
 import { notificationService } from './services/notificationService';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -348,7 +343,6 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <AnimatePresence>{!userProfile && <ProfileForm onSave={handleSaveProfile} />}</AnimatePresence>
 
       <SettingsModal isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} onResetProfile={handleFullReset} onLogout={handleLogout} />
 
