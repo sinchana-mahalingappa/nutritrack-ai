@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NutrientData, UserProfile, NutrientGoal, FoodItem, DietType, FoodCategory, HistoryMap } from './types';
 import { DEFAULT_GOALS, calculatePersonalizedGoals, FOOD_DATABASE } from './constants';
-import NutrientProgress from './components/NutrientProgress';
 import ProfileForm from './components/ProfileForm';
 import WaterTracker from './components/WaterTracker';
 import HistoryHeatmap from './components/HistoryHeatmap';
