@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NutrientData, UserProfile, NutrientGoal, FoodItem, DietType, FoodCategory, HistoryMap } from './types';
 import { DEFAULT_GOALS, calculatePersonalizedGoals, FOOD_DATABASE } from './constants';
 import ProfileForm from './components/ProfileForm';
-import WaterTracker from './components/WaterTracker';
 import HistoryHeatmap from './components/HistoryHeatmap';
 import SettingsModal from './components/SettingsModal';
 import LoginPage from './components/LoginPage';
@@ -547,7 +546,6 @@ const App: React.FC = () => {
               <span className="text-xs font-black uppercase tracking-widest group-hover:text-emerald-600 transition-colors">Add Nutrient</span>
             </motion.button>
           </div>
-          <WaterTracker current={currentWater} goal={waterGoal} onUpdate={handleUpdateWater} onReset={() => handleUpdateWater(-currentWater)} />
           <HistoryHeatmap history={dailyRecords} goals={goals} />
           
           <div className="bg-white/40 p-10 rounded-[2.5rem] border border-white/50 shadow-sm relative overflow-hidden">
